@@ -1,6 +1,6 @@
 package com
 
-import com.connection.PostgresConnection
+import com.connection.{DBconnection, PostgresConnection}
 
 /**
   * Created by knoldus on 14/3/17.
@@ -8,7 +8,7 @@ import com.connection.PostgresConnection
 case class Employee(id: Int, name: String)
 
 trait EmployeeTable {
-  this: PostgresConnection =>
+  this: DBconnection =>
 
   import driver.api._
 
@@ -49,6 +49,7 @@ trait EmployeeRepo extends EmployeeTable {
       employeeQuery.to[List].result
     }
   }
+
 
 }
 

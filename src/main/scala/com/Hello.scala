@@ -11,10 +11,14 @@ object Hello {
     //Await.result(EmployeeRepo.create,Duration.Inf)
     //val result=EmployeeRepo.insert(Employee(1,"ncd"))
     //ProjectRepo.create
-    //EmployeeRepo.insert(Employee(2,"Abhay"))
+    //ProjectRepo.insert(Project("P1",2))
+    //ProjectRepo.insert(Project("P3",3))
+    //ProjectRepo.insert(Project("P2",2))
     //EmployeeRepo.update(Employee(2,"Sumit"))
     //val result=Await.result(EmployeeRepo.getAllEmployees,Duration.Inf)
     //println(result)
-    Thread.sleep(3000)
+    ProjectRepo.joinExample
+
+    Thread.sleep(10000)
   }
 }
